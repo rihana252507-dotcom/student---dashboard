@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="dashboard">
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <h2>Student AI</h2>
+
+        <button onclick="showSection('overview')">
+            Dashboard
+        </button>
+
+        <button onclick="showSection('marks')">
+            Marks
+        </button>
+
+        <button onclick="showSection('attendance')">
+            Attendance
+        </button>
+
+        <button onclick="showSection('performance')">
+            Performance
+        </button>
+
+        <button onclick="logout()">
+            Logout
+        </button>
+
+    </aside>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="main">
+
+        <div class="topbar">
+
+            <div>
+                <h1>Student Dashboard</h1>
+                <p>Welcome, <span id="studentName"></span></p>
+            </div>
+
+            <div class="student-id">
+                ID: <span id="studentId"></span>
+            </div>
+
+        </div>
+
+
+        <!-- OVERVIEW -->
+
+        <section id="overview">
+
+            <h2>Overview</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Overall Marks</h3>
+                    <p id="overallMarks">--</p>
+                </div>
+
+                <div class="card">
+                    <h3>Attendance</h3>
+                    <p id="attendance">--</p>
+                </div>
+
+                <div class="card">
+                    <h3>Assignments</h3>
+                    <p id="assignments">--</p>
+                </div>
+
+                <div class="card">
+                    <h3>Risk Level</h3>
+                    <p id="risk">--</p>
+                </div>
+
+            </div>
+
+
+            <!-- STUDENT DETAILS -->
+
+            <div class="section-box">
+
+                <h2>Student Details</h2>
+
+                <p><b>Name:</b> <span id="detailName"></span></p>
+
+                <p><b>Student ID:</b> <span id="detailId"></span></p>
+
+                <p><b>Department:</b> <span id="department"></span></p>
+
+                <p><b>Year:</b> <span id="year"></span></p>
+
+            </div>
+
+
+            <!-- SUBJECT MARKS -->
+
+            <div class="section-box">
+
+                <h2>Subject-wise Marks</h2>
+
+                <div id="subjects"></div>
+
+            </div>
+
+
+            <!-- AI ANALYSIS -->
+
+            <div class="section-box">
+
+                <h2>AI Performance Analysis</h2>
+
+                <p id="analysis"></p>
+
+            </div>
+
+
+            <!-- STUDY PLAN -->
+
+            <div class="section-box">
+
+                <h2>Personalized Study Plan</h2>
+
+                <ul id="studyPlan"></ul>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
